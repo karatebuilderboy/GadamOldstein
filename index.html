@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
+      
+  <canvas id="gameCanvas" style="border:1px solid #d3d3d3;">
+  Your browser does not support the HTML5 canvas tag.</canvas>
+  
+  <script type="text/javascript">
+   function autorun()
+   {
+       //Make Canvas
+       var c = document.getElementById("gameCanvas");
+       var ctx = c.getContext("2d");
+       ctx.canvas.width  = (window.innerWidth) / 1.5;
+       ctx.canvas.height = (window.innerHeight) / 1.03;
+       console.log("Canvas Initialized");
+       
+       //Do Things
+       window.print();
+       
+   }
+   if (window.addEventListener) window.addEventListener("load", autorun, false);
+   else if (window.attachEvent) window.attachEvent("onload", autorun);
+   else window.onload = autorun;
+  </script>
+  </body>
+</html>
